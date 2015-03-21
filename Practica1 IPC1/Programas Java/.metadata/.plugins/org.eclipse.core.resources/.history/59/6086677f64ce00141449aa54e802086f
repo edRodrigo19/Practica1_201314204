@@ -1,0 +1,26 @@
+package Problemas;
+import java.util.Scanner;
+public class Pro9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			int numero=0, uni=0, dec=0, cen=0, mil=0;
+			System.out.println("Ingrese un número");
+			Scanner n=new Scanner(System.in);
+			numero=n.nextInt();
+		
+			mil = numero / 1000;
+		    cen = numero / 100 % 10;
+		    dec = numero / 10 % 10;
+		    uni = numero % 10;
+			
+			System.out.println("La unidad es "+ uni);
+			System.out.println("La decena es "+ (dec-uni));
+			System.out.println("La centena es "+ (cen-dec));
+			System.out.println("El millar es "+ (mil-(cen)));
+			
+			
+			}
+	}
+
+}

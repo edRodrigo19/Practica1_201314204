@@ -1,0 +1,27 @@
+package Problemas;
+
+import java.util.Scanner;
+
+public class Pro11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String rom1, rom2, rom3, rom4, rom5;
+		int limite=0;
+		Scanner sc = new Scanner(System.in);  
+		 System.out.println("Ingrese 5 numeros romano");  
+
+			 rom1=sc.next();
+		     rom2=sc.next();
+		     rom3=sc.next();
+		     rom4=sc.next();
+		     rom5=sc.next();
+		    
+		     String[] romanos=new String[6];
+			romanos[0]="Juan";
+			romanos[1]="Pablo";
+			romanos[2]="Ana";
+
+		  }
+}
+		    

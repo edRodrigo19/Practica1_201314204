@@ -1,0 +1,27 @@
+package Problemas;
+import java.util.Scanner;
+public class Pro10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int f=0,c=f; 
+
+		Scanner s = new Scanner(System.in);
+		System.out.println("Ingrese un número");
+		f=s.nextInt();
+		for(int contar=0; contar<=f; contar++){ // Inicio del ciclo
+			
+			for(int espacios=0; espacios<=contar; espacios++)
+			{
+				System.out.print(" ");
+			}
+			for(int aste=contar; aste<=f; aste++)
+			{
+				System.out.print(" "+f);
+			}
+			System.out.println();
+		}
+		
+	}
+
+}

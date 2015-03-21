@@ -1,0 +1,41 @@
+package Problemas;
+import java.util.Scanner;
+public class Pro13 {
+	
+public static void main(String[]args){
+	
+	int respuesta=0, comparar=0;
+	Scanner sc=new Scanner(System.in);
+	String letra1, letra2;
+	System.out.println("ingrese cualquier letra del abecedario");
+	letra1=sc.next();
+		while (respuesta==0){
+			
+			
+			
+			System.out.println("Intente adivinar la letra");
+			
+			letra2=sc.next();
+			comparar=letra1.compareTo(letra2);
+			
+		if (comparar<0 ){
+			
+			System.out.println("Antes");
+			
+		}
+		else if (comparar>0){
+	 		System.out.println("Despues");
+	 		
+	 		
+			}	
+		 		if (comparar==0){
+		 			System.out.println("Haz acertado a la letra");
+		 			System.out.println(comparar);
+		 			respuesta=2;
+		 			
+		 		}
+		}
+	
+}
+}	
+

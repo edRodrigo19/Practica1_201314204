@@ -1,0 +1,24 @@
+
+public class prueba1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int opc=0;
+		int resp;
+		while (opc==0) //Mientras que la opcion sea igual a cero ejecuto indefinidamente las instrucciones
+		{
+		System.out.println("Esta es la pregunta uno, elija una de las tres respuestas:");
+		System.out.println("Respuesta 1, Respuesta 2, Respuesta 3.");
+		resp= Integer.parseInt(in.readLine());//Se lee el numero de respuesta
+		if(resp==1)//si la respuesta correcta es 1, automaticamente cuando el bucle vuelva a iniciarse y vea que la condicion "while (opc==0)" es falsa no lo ejecuta y pasa a la siguiente pregunta.
+		{
+		System.out.println("Correcto!");
+		opc=1;}
+		else  //si no es correcta se mantiene y el bucle vuelve a ejecutarse
+		{
+		System.out.println("Respuesta Incorrecta, Intenta de Nuevo");}
+		}
+
+	}
+
+}

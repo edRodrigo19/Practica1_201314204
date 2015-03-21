@@ -1,0 +1,25 @@
+package Problemas;
+import java.util.Scanner;
+public class Pro14 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			int lado=0;
+			System.out.println("Ingrese el numero de asteriscos que desea");
+		Scanner n=new Scanner(System.in);
+		lado=n.nextInt();
+			for (int cont=0; cont<=lado; cont++){
+				
+				for(int b=1; b<=lado-1; b++){
+					System.out.print("* ");
+				}
+				
+				for(int h=1; h<=lado-1; h++){
+					System.out.println("*"+lado+"");
+					
+				}
+			}
+	}
+			
+
+}

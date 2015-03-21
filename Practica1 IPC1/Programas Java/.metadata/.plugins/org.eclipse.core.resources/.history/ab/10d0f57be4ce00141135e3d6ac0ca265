@@ -1,0 +1,27 @@
+package Problemas;
+import java.util.Scanner;
+import static java.lang.Math.*; 
+public class Pro15 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int primo=0, i=0, j=0, div=0,raiz=0, contador=0;
+		Scanner n=new Scanner(System.in);
+		primo=n.nextInt();
+		
+		for (i=2;i<=primo;i++) { 
+			div=0; 
+			raiz=(int)sqrt(i);
+			for (j=1;j<=raiz;j++) { 
+				if (i%j==0)
+					div++;
+				}
+			if (div<=1) 
+				contador++;
+				System.out.println (i + " es numero primo" );
+			
+		}
+		
+				System.out.println ("Hay " + (contador)+ " números primos" );
+	}
+} 

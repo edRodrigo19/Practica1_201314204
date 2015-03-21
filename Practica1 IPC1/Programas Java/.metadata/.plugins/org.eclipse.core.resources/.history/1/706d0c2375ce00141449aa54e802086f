@@ -1,0 +1,22 @@
+package Problemas;
+
+import java.util.Scanner;
+
+public class Pro11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String romano1, romano2, romano3, romano4, romano5, romano6;
+		int caracteres=0;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Ingrese un texto");
+		romano1 = s.next();
+		romano2 = s.next();
+		romano3 = s.next();
+		romano4 = s.next();
+		romano5 = s.next();
+		romano6 = s.next();
+				
+	}
+
+}
