@@ -24,10 +24,10 @@ public class Problema9 {
 	    cen = numero / 100 % 10;
 	    dec = numero / 10 % 10;
 	    uni = numero % 10;
-	      for (int i = 1; i <= mil; i++) {
+	      for (int i = 1; i <= mil; i++) {//para millare
 	             rom = rom + "M";
 	      }		    
-	      if (cen == 9) { 
+	      if (cen == 9) { //para centenas
 	          rom = rom + "CM";
 	      } else if (cen >= 5) {
 	                     rom = rom + "D";
@@ -41,7 +41,7 @@ public class Problema9 {
 	                         rom = rom + "C";
 	                  }
 	      }		   
-	      if (dec == 9) { 
+	      if (dec == 9) { //para decenas
 	           rom = rom + "XC";
 	      } else if (dec >= 5) {
 	                      rom = rom + "L";
@@ -55,7 +55,7 @@ public class Problema9 {
 	                           rom = rom + "X";
 	                    }
 	      }
-	      if (uni == 9) { 
+	      if (uni == 9) { //para unidades
 	           rom = rom + "IX";
 	      } else if (uni >= 5) {
 	                      rom = rom + "V";

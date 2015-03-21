@@ -12,7 +12,7 @@ public class Problema10 {
 		System.out.println("Ingrese un número");
 		f=s.nextInt();
 		int c=f;
-		for(int contar=1; contar<=c; contar++){
+		for(int contar=1; contar<=c; contar++){ // Inicio del ciclo
 			
 			for(int espacios=0; espacios<=contar; espacios++){
 				System.out.print("  ");
