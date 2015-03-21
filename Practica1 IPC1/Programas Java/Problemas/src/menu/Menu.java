@@ -1,5 +1,6 @@
 package menu;
 import static java.lang.Math.sqrt;
+
 import java.util.Random;
 import java.util.Scanner;
 public class Menu {
@@ -31,9 +32,9 @@ public class Menu {
 				case 1:{	//Problema 1
 
 					int horizontal=8,vertical=horizontal*2; 
-						for(int contar=0;contar<=horizontal;contar++){ // Inicio del ciclo
+						for(int contar=0;contar<=horizontal;contar++){ 
 							
-							for(int espacios=horizontal-1;espacios>=contar;espacios--)//para los espacios
+							for(int espacios=horizontal-1;espacios>=contar;espacios--)
 							{
 								System.out.print(" ");
 							}
@@ -41,9 +42,9 @@ public class Menu {
 							{
 								System.out.print("*");
 							}
-							System.out.println(); //Parte de arriba
+							System.out.println(); 
 						}
-						for(int contar=0;contar<=horizontal-1;contar++){ // Inicio del ciclo
+						for(int contar=0;contar<=horizontal-1;contar++){ 
 							
 							for(int espacios=0;espacios<=contar;espacios++)
 							{
@@ -53,7 +54,7 @@ public class Menu {
 							{
 								System.out.print("*");
 							}
-							System.out.println(); //Parte de abajo
+							System.out.println(); 
 						}
 						break;
 				}// Fin del Problema 1	
@@ -159,8 +160,9 @@ public class Menu {
 					}
 				}	
 			
-				break;
-				case 5:{
+				break;// fin del problema 4
+				
+				case 5:{//inicio del problema 5
 					// TODO Auto-generated method stub
 					String fecha1, fecha2;
 					int dia1=0, mes1=0, año1=0;
@@ -198,11 +200,8 @@ public class Menu {
 						}	
 					}
 				}
-				break;
-		case 0:{
-			opcion=0;
-		}
-		break;
+				break;// fin del problema 5
+		
 		case 2:
 				opcion=0;
 				System.out.println("6. Problema 6");
@@ -218,7 +217,7 @@ public class Menu {
 				opcion = s.nextInt();
 				switch(opcion)
 				{
-				case 6:{
+				case 6:{// inicio del problema 6
 					double num1=0, num2=0;
 					String operador;
 					operador = s.next();
@@ -246,9 +245,9 @@ public class Menu {
 						else
 						System.out.println("Sintax error");
 				}
-				break;
+				break;// fin del problema 6
 				
-				case 7:{
+				case 7:{// inicio del problema 7
 					int numero=0;
 					Scanner n= new Scanner(System.in);
 					System.out.println("Ingrese 1 número entre 0 y 10");
@@ -287,9 +286,9 @@ public class Menu {
 					System.out.println("El número no esta entre 0 y 10");
 				
 					}
-				break;
+				break;// fin del problema 7
 				
-				case 8:{
+				case 8:{// inicio del problema 8
 					int liminf=0, limsup=0, azar=0;
 					Scanner n=new Scanner(System.in);
 					System.out.println("Ingrese el número del limite inferior");
@@ -608,8 +607,9 @@ public class Menu {
 							break;
 						}
 				}
-				break;
-				case 9:{
+				break;// fin del problema 8
+				
+				case 9:{// inicio del problema 9
 					int num=0;
 					System.out.println("Ingrese un número entre 0 y 3999");
 					 do {
@@ -620,14 +620,14 @@ public class Menu {
 			      
 			}
 				
-				break;
+				break;// fin del problema 9
 				
-				case 10:{
+				case 10:{// inicio del problema 10
 					int f=0;
 					System.out.println("Ingrese un número");
 					f=s.nextInt();
 					int c=f;
-					for(int contar=1; contar<=c; contar++){ // Inicio del ciclo
+					for(int contar=1; contar<=c; contar++){ 
 						
 						for(int espacios=0; espacios<=contar; espacios++){
 							System.out.print("  ");
@@ -641,16 +641,172 @@ public class Menu {
 					}
 				}
 		
-				break;
+				break;// fin del problema 10
 				
 				case 11:{
-					
-				}
+					Scanner r = new Scanner(System.in);
+
+			        System.out.println("Ingrese 6 números Romanos entre 0 y 100: ");
+			        String romano1, romano2, romano3, romano4, romano5;
+			        
+			        romano1= r.next();
+			      
+			        char Rom[]= {' ','I','V','X','L','C'}; 
+			        int valor[] = {0,1,5,10,50,100};
+			        int ant=0, suma1=0, suma2=0, suma3=0, suma4=0, suma5=0;
+			        int ant1=0, ant2=0, ant3=0, ant4=0, ant5=0;  
+			        char letra = ' ';
+			        
+			        for(int i = 0; i < romano1.length(); i++){
+			                letra = romano1.charAt(i);
+			                
+			                for(int j = 0; j < Rom.length; j++){
+			                    if(letra == Rom[j]){             
+			                                suma1 = suma1 + valor [j]; 
+			                                
+			                            if( ant1 < valor[j]){ 
+			                                    suma1 = suma1 - ant1*2 ; 
+			                                    ant1 = valor[j]; 
+			                                    
+			                            }else {
+			                        ant1 = valor[j];    
+			                            	}
+			                    }              
+
+			                }
+
+			        }
+			        					
+			        				romano2= r.next();
+			        			        for(int i = 0; i < romano2.length(); i++){
+			        			                letra = romano2.charAt(i);
+			        			                
+			        			                for(int j = 0; j < Rom.length; j++){
+			        			                    if(letra == Rom[j]){            
+			        			                                suma2 = suma2 + valor [j]; 
+			        			                                
+			        			                            if( ant2 < valor[j]){ 
+			        			                                    suma2 = suma2 - ant2*2 ; 
+			        			                                    ant2 = valor[j]; 
+			        			                                    
+			        			                            }else {
+			        			                        ant2 = valor[j];       
+			        			                            	}
+			        			                    }              
+
+			        			                }
+
+			        			        }
+			        			        
+			        			        romano3= r.next();
+			        			        for(int i = 0; i < romano3.length(); i++){
+			        			                letra = romano3.charAt(i);
+			        			                
+			        			                for(int j = 0; j < Rom.length; j++){
+			        			                    if(letra == Rom[j]){          
+			        			                                suma3 = suma3 + valor [j]; 
+			        			                                
+			        			                            if( ant3 < valor[j]){ 
+			        			                                    suma3 = suma3 - ant3*2 ; 
+			        			                                    ant3 = valor[j];    			                               
+			        			                            }else {
+			        			                        ant3 = valor[j];         
+			        			                            	}
+			        			                    }              
+
+			        			                }
+
+			        			        }
+			        			        
+			        			        romano4= r.next();
+			        			        for(int i = 0; i < romano4.length(); i++){
+			        			                letra = romano4.charAt(i);
+			        			                
+			        			                for(int j = 0; j < Rom.length; j++){
+			        			                    if(letra == Rom[j]){       
+			        			                                suma4 = suma4 + valor [j]; 
+			        			                                
+			        			                            if( ant4 < valor[j]){ 
+			        			                                    suma4 = suma4 - ant4*2 ;
+			        			                                    ant4 = valor[j];
+			        			                                    
+			        			                            }else {
+			        			                        ant4 = valor[j];    
+			        			                            	}
+			        			                    }              
+
+			        			                }
+
+			        			        }
+			        			        
+			        			        romano5= r.next();
+			        			        for(int i = 0; i < romano5.length(); i++){
+			        			                letra = romano5.charAt(i);
+			        			                
+			        			                for(int j = 0; j < Rom.length; j++){
+			        			                    if(letra == Rom[j]){             
+			        			                                suma5 = suma5 + valor [j]; 
+			        			                                
+			        			                            if( ant5 < valor[j]){ 
+			        			                                    suma5 = suma5 - ant5*2 ; 
+			        			                                    ant5 = valor[j]; 
+			        			                                    
+			        			                            }else {
+			        			                        ant5 = valor[j];
+			        			                            	}
+			        			                    }              
+
+			        			                }
+
+			        			        }
+			        			        
+			        			        if(suma1<suma2 && suma1<suma3 && suma1<suma4 && suma1<suma5)
+			        			        {
+			    			        		System.out.println( romano1+ " es el menor");
+			        			        }
+			    			        else if(suma2<suma1 && suma2<suma3 && suma2<suma4 && suma2<suma5)
+			    			        {
+						        		System.out.println( romano2+ " es el menor");
+			    			        }
+			    			        else if(suma3<suma2 && suma3<suma1 && suma3<suma4 && suma3<suma5)
+			    			        {
+						        		System.out.println( romano3+ " es el menor");
+			    			        }
+			    			        else if(suma4<suma1 && suma4<suma2 && suma4<suma3 && suma4<suma5)
+			    			        {
+						        		System.out.println( romano4+ " es el menor");
+			    			        }
+			    			        else if(suma5<suma1 && suma5<suma2 && suma5<suma3 && suma5<suma4)
+			    			        {
+						        		System.out.println( romano5+ " es el menor");
+			    			        }
+			        			        
+			        			        if(suma1>suma2 && suma1>suma3 && suma1>suma4 && suma1>suma5)
+			        			        {
+			        			        		System.out.println( romano1+ " es el mayor");
+			        			        }
+			        			        else if(suma2>suma1 && suma2>suma3 && suma2>suma4 && suma2>suma5)
+			        			        {
+			    			        		System.out.println( romano2+ " es el mayor");
+			        			        }
+			        			        else if(suma3>suma2 && suma3>suma1 && suma3>suma4 && suma3>suma5)
+			        			        {
+			    			        		System.out.println( romano3+ " es el mayor");
+			        			        }
+			        			        else if(suma4>suma1 && suma4>suma2 && suma4>suma3 && suma4>suma5)
+			        			        {
+			    			        		System.out.println( romano4+ " es el mayor");
+			        			        }
+			        			        else if(suma5>suma1 && suma5>suma2 && suma5>suma3 && suma5>suma4)
+			        			        {
+			    			        		System.out.println( romano5+ " es el mayor");
+			        			        }
+			   }
+			
 				break;
 				
-				case 12:{
+				case 12:{// inicio del problema 12
 					String texto;
-					int caracteres=0;
 					Scanner t = new Scanner(System.in);
 					System.out.println("Ingrese un texto");
 					texto = t.nextLine();
@@ -658,9 +814,9 @@ public class Menu {
 							for(int i=0; i<texto.length();i++)
 								System.out.print("*");
 				}
-				break;
+				break;// fin del problema 12
 				
-				case 13:{
+				case 13:{// inicio del problema 13
 					int respuesta=0, comparar=0;
 					Scanner sc=new Scanner(System.in);
 					String letra1, letra2;
@@ -683,9 +839,9 @@ public class Menu {
 						 		}
 						}
 				}
-				break;
+				break;// fin del problema 13
 				
-				case 14:{
+				case 14:{// inicio del problema 14
 					int lado=0;
 					System.out.println("Ingrese el numero de asteriscos que desea");
 				Scanner n=new Scanner(System.in);
@@ -705,9 +861,9 @@ public class Menu {
 						
 						}
 				}
-				break;
+				break;// fin del problema 14
 				
-				case 15:{
+				case 15:{// inicio del problema 15
 					int primo=0, i=0, j=0, div=0,raiz=0, contador=0;
 					Scanner n=new Scanner(System.in);
 					System.out.println("Ingrese un número");
@@ -725,21 +881,21 @@ public class Menu {
 					}
 							System.out.println ("Hay " + (contador)+ " números primos entre 1 y " + primo );
 				}
-				break;
+				break;// fin del problema 15
 				}
 			}
 	}
-public static String convertirANumerosRomanos(int numero) {
+public static String convertirANumerosRomanos(int numero) {// parte del problema 9
 	int uni=0, dec=0, cen=0, mil=0;
 	String rom = "";
 	mil = numero / 1000;
     cen = numero / 100 % 10;
     dec = numero / 10 % 10;
     uni = numero % 10;
-      for (int i = 1; i <= mil; i++) {//para millare
+      for (int i = 1; i <= mil; i++) {
              rom = rom + "M";
       }		    
-      if (cen == 9) { //para centenas
+      if (cen == 9) { 
           rom = rom + "CM";
       } else if (cen >= 5) {
                      rom = rom + "D";
@@ -753,7 +909,7 @@ public static String convertirANumerosRomanos(int numero) {
                          rom = rom + "C";
                   }
       }		   
-      if (dec == 9) { //para decenas
+      if (dec == 9) { 
            rom = rom + "XC";
       } else if (dec >= 5) {
                       rom = rom + "L";
@@ -767,7 +923,7 @@ public static String convertirANumerosRomanos(int numero) {
                            rom = rom + "X";
                     }
       }
-      if (uni == 9) { //para unidades
+      if (uni == 9) { 
            rom = rom + "IX";
       } else if (uni >= 5) {
                       rom = rom + "V";
